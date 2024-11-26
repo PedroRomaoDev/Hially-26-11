@@ -1,0 +1,226 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+    transform: scale(1.1);
+    font-size: 15px;
+}
+
+/* Seção Principal */
+.descricao {
+    background-image: url('imgs/3d-render-network-communications-design-background-with-shallow-depth-field.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.descricao-container h2 {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.descricao-container p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Galeria */
+#galeria {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#galeria h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-galeria img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+/* Rodapé */
+footer {
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Fonte limpa e moderna */
+    border-top: 1px solid #ddd; /* Linha sutil no topo para separação */
+    margin-top: 40px; /* Espaço superior para não colar no conteúdo */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .info {
+    margin-bottom: 20px; /* Distância entre os textos e as redes sociais */
+}
+
+footer .info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+footer .info a {
+    color: #007BFF; /* Cor azul suave para links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer .info a:hover {
+    color: #0056b3; /* Azul mais escuro no hover */
+}
+
+/* Redes sociais */
+footer .redes-sociais a {
+    margin: 0 15px;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .redes-sociais a:hover {
+    color: #007BFF; /* Cor azul para links de redes sociais */
+    transform: scale(1.1); /* Leve aumento no tamanho */
+}
+
+/* Media Queries para responsividade no Rodapé */
+@media (max-width: 768px) {
+    footer .footer-content {
+        flex-direction: column;
+    }
+
+    footer .info p {
+        font-size: 14px;
+    }
+
+    footer .redes-sociais a {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 24px;
+    }
+
+    .descricao-container h2 {
+        font-size: 36px;
+    }
+
+    .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
